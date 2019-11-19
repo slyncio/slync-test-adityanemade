@@ -22,19 +22,4 @@ Note: *Do not* create a Twitter clone and *do not* share any Twitter API secrets
 Best of luck!
 Slync Engineering Team
 
-### Deployment
 
-In the /back folder find .env_sample file. Copy and rename it to .env
-Paste your Twitter API keys.
-
-You can use Docker to run the project
-
-```sh
-docker-compose build
-docker-compose up
-```
-OR
-
-1. Run `npm install`
-2. Run `npm start`
-3. Run tests with `npm test` -- you may have to press "a" to run all tests
