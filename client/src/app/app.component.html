@@ -1,0 +1,56 @@
+<div class="container">
+  <h1>Simple Twitter Client</h1>
+  <div class="row">
+    <div class="col-sm">
+      <form (submit)="getTweets(searchTweet)">
+        <div class="form-row">
+          <div class="col">
+            <input [(ngModel)]="searchTweet" name="tweet" placeholder="Search by topic" class="form-control sm" autocomplete="off">
+          </div>
+          <div class="col">
+            <button type="submit" class="btn btn-primary btn-sm">Search Text</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="col-sm">
+      <form (submit)="getUserTweets(searchUserTweet)">
+        <div class="form-row">
+          <div class="col">
+            <input [(ngModel)]="searchUserTweet" name="userTweet" placeholder="Search by handle" class="form-control" autocomplete="off">
+          </div>
+          <div class="col">
+            <button type="submit" class="btn btn-primary btn-sm">Search Handle</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <ng-container *ngFor="let tweets of myTimeline">
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row no-gutters">
+            <div class="col-md-4">
+              <img class="card-img" [src]= "tweets.user.profile_image_url"/>
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">{{tweets.user.name}}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">@{{tweets.user.screen_name}}</h6>
+                <p class="card-text">{{tweets.full_text
+                  }}</p>
+                  <p class="card-text">{{tweets.text
+                    }}</p>
+                <p class="card-text"><small class="text-muted">{{tweets.created_at}}</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
