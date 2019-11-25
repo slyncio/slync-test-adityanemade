@@ -2,6 +2,23 @@
 
 Implement a simple *Twitter client* as a single page application which initially shows general public tweets. Allow the user to specify a Twitter handle to view the tweets from. When a user requests a specific Twitter handle and the UI shows the latest tweets from that handle, there should also be a way to filter / search tweets by text. Also, once the user has selected a handle to view the Tweets from, the UI should periodically update with newer Tweets.
 
+### Running the application
+
+Add your API keys to .env file in the server
+
+    cd server/.env
+
+For the client side
+
+    cd client
+    npm install
+    npm start
+
+For the server side
+
+    cd server
+    npm install
+    npm start
 ### Grading Criteria
 
 * UI Design
@@ -21,5 +38,3 @@ Note: *Do not* create a Twitter clone and *do not* share any Twitter API secrets
 
 Best of luck!
 Slync Engineering Team
-
-
